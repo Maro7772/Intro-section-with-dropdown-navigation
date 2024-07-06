@@ -1,0 +1,239 @@
+:root {
+  --Almost-White: hsl(0, 0%, 98%);
+  --Medium-Gray: hsl(0, 0%, 41%);
+  --Almost-Black: hsl(0, 0%, 8%);
+  --Font-size-p: 18px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Epilogue", sans-serif;
+}
+.btn-primary {
+  padding: 15px 20px;
+  border: 1px solid var(--Medium-Gray);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  color: var(--Medium-Gray);
+}
+.btn-primary:is(:hover,:focus-within) {
+  color: var(--Almost-Black);
+  border-color: var(--Almost-Black);
+}
+.btn-secondary {
+  padding: 10px;
+  color: var(--Medium-Gray);
+}
+.overlay {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.4);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.overlay.none {
+  display: none;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  color: var(--Medium-Gray);
+  font-weight: bold;
+}
+ul {
+  list-style: none;
+  cursor: pointer;
+}
+.mobile {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  padding: 20px;
+  z-index: 1;
+  background-color: white;
+  width: 250px;
+  height: 100%;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+.mobile.active {
+  right: 0px;
+}
+.list {
+  margin-block-start: 70px;
+}
+.btn {
+  text-align: center;
+  cursor: pointer;
+  margin: 5px;
+}
+.close {
+  position: absolute;
+  right: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+.item-list {
+  padding: 10px;
+} 
+
+.first,
+.second {
+  padding: 20px;
+}
+.one,
+.two {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 20px;
+}
+.first,
+.second {
+  display: none;
+}
+.first.active,
+.second.active {
+  display: block;
+}
+.item-list-one > img ,
+.item-list-two > img {
+  padding-left: 5px;
+}
+.section {
+  margin-block-start: 20px;
+}
+.w-100 {
+  width: 100%;
+}
+h1 {
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  margin-block-start: 20px;
+}
+p {
+  text-align: center;
+  color: var(--Medium-Gray);
+  font-weight: 600;
+  padding: 15px;
+}
+.press {
+  border: 1px solid var(--Almost-Black);
+  color: var(--Almost-White);
+  background-color: var(--Almost-Black);
+  text-align: center;
+  width: fit-content;
+  padding: 15px 20px;
+  margin-inline: auto;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+.press:is(:hover, :focus-within) {
+  background-color: var(--Almost-White);
+  color: var(--Almost-Black);
+}
+.images {
+  margin-block-start: 30px;
+  text-align: center;
+}
+.images img {
+  padding: 5px;
+}
+.right {
+  display: none;
+}
+
+@media (min-width: 700px) {
+  .open,
+  .close {
+    display: none;  
+  }
+  header {
+    justify-content: flex-start;
+    gap: 20px;
+  }
+  .mobile {
+    all: unset;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .list {
+    margin-block-start: 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .button {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .first.active, 
+  .second.active {
+    position: absolute;
+    background-color: var(--Almost-White);
+    border: 1px solid var(--Almost-Black);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    padding-block-start: 0;
+}
+  .section > img {
+    display: none;
+  }
+  .section {
+    display: flex;
+    padding-inline: 50px;
+    justify-content: space-evenly;
+    margin-inline: auto;
+  }
+  .left {
+    width: 500px;
+  }
+  .left h1 {
+    text-align: left;
+    font-size: 75px;
+  }
+  .left p {
+    text-align: left;
+    padding: 20px 20px 20px 0;
+    margin-block-end: 20px;
+  }
+  .left .press {
+    margin: 0;
+  }
+  .left .images {
+    text-align: left;
+  }
+  .right {
+    display: block;
+    width: 400px;
+  }
+  
+}
